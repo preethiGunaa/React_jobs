@@ -11,7 +11,7 @@ This is a self-developed React project where I’m building a Job Application in
 - Initialized the project using **Vite**
 - Installed core dependencies:
   - `react`
-  - `react-dom`
+  - `react-dom`a
   - `vite`
 - Verified basic React rendering using a test component
 - Set up project folder structure
@@ -85,3 +85,55 @@ npx tailwindcss init -p
 ## 🔁 Callback Usage
 
 - Passed data from parent to child
+
+Day 4 – Componentization + State Management
+What I Did:
+
+Broke UI into reusable components like Header, Card, CardList, and Footer
+
+Used useState to manage and render dynamic data
+
+Created and used local JSON mock data
+
+Used .map() to display a list of job cards
+
+Passed data using callback props between parent and child components
+
+Components Created:
+
+Header.jsx
+
+Card.jsx
+
+CardList.jsx
+
+Footer.jsx
+
+Data Handling:
+
+Stored mock data in a local data.json file (inside src/)
+
+Read and mapped the data inside App.jsx or a data controller
+
+✅ Day 5 – API Integration + useEffect
+What I Did:
+
+Replaced mock data with real API fetching
+
+Used useEffect() to call an external job API on component mount
+
+Displayed fetched jobs dynamically
+
+Handled loading and error states
+
+Example:
+
+js
+Copy
+Edit
+useEffect(() => {
+  fetch('https://api.example.com/jobs')
+    .then(res => res.json())
+    .then(data => setJobs(data))
+    .catch(err => console.error(err));
+}, []);
